@@ -1,5 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 import MainPage from "./pages/MainPage";
 import Cart from "./pages/Cart";
 import About from "./pages/About";
@@ -13,16 +16,21 @@ import "./App.css";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<MainPage />} />
-      <Route path="/about-us" element={<About />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/collection" element={<Collection />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/order" element={<Order />} />
-      <Route path="/place-order" element={<PlaceOrder />} />
-      <Route path="/product/:productId" element={<Product />} />
-    </Routes>
+    <div>
+      <Navbar />
+      <Hero />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/place-order" element={<PlaceOrder />} />
+        <Route path="/product/:productId" element={<Product />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 //
