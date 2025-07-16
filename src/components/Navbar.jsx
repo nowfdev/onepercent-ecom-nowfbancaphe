@@ -1,12 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm">
-      <div className="flex-1">
+      {/* Start Left */}
+      <div className="flex-1 justify-start">
         <a className="btn btn-ghost text-xl">#NowfBanCaPhe</a>
       </div>
-      <div className="flex-none">
+      {/* End Left */}
+
+      {/* Start Midle */}
+      <div className="flex-1 flex justify-center gap-4">
+        <Link to="/" className="btn btn-ghost text-sm">
+          Home
+        </Link>
+        <Link to="/about-us" className="btn btn-ghost text-sm">
+          About
+        </Link>
+        <Link to="/collection" className="btn btn-ghost text-sm">
+          Collection
+        </Link>
+      </div>
+      {/* End Middle */}
+
+      {/* Start Right */}
+      <div className="flex-1 flex justify-end items-center gap-2">
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">
@@ -68,6 +87,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+      {/* End Right */}
     </div>
   );
 };
